@@ -36,12 +36,16 @@ class ChatActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.button.setOnClickListener {
-            showToast()
+        binding.composeButton.setContent {
+            MaterialTheme {
+                ComposeButton {
+                    showToast()
+                }
+            }
         }
     }
 
-    private fun showToast() {
+            private fun showToast() {
         Toast.makeText(this, "Imaginary chat started!", Toast.LENGTH_SHORT).show()
     }
 }
